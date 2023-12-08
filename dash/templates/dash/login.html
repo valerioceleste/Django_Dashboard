@@ -1,0 +1,23 @@
+{% extends 'dash/base.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+<br>
+<form action="{% url 'dash:login' %}" method="post">
+	{% csrf_token %}
+	<div class="container">
+		<h1>Log In</h1>
+		<hr>
+		<label for="username"><b>Username</b></label>
+		<input type="text" class="form-control" placeholder="Enter Username: " name="username" required>
+		<br>
+		<label for="psw"><b>Password</b></label>
+		<input type="password" class="form-control" placeholder="Enter Password: " name="psw" required>
+
+		<br>
+
+		<button class="btn btn-primary" type="submit">Login</button>
+	</div>
+</form>
+{% endblock content %}
