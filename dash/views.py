@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the dash index.")
+    return render(request, 'dash/index.html')
 
 def login(request):
     context = {}
@@ -24,11 +24,11 @@ def logout(request):
     logout(request)
     return redirect('dash:index')
 
-def registration(request):
+def signup(request):
     context = {}
-    # If it is a GET request, just render the registration page
+    # If it is a GET request, just render the sign up page
     if request.method == 'GET':
-        return render(request, 'dash/registration.html', context)
+        return render(request, 'dash/signup.html', context)
     # If it is a POST request
     elif request.method == 'POST':
         # Get user information from request.POST
@@ -53,4 +53,4 @@ def registration(request):
             login(request, user)
             return redirect("dash:index")
         else:
-            return render(request, 'dash/registration.html', context)
+            return render(request, 'dash/signup.html', context)

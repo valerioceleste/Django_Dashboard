@@ -122,6 +122,7 @@ STATIC_URL = 'assets/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'web', 'assets'),
+	os.path.join(BASE_DIR, 'dash', 'assets'),
     # Add more directories if needed
 ]
 

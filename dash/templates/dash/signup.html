@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Match Maker - Log In</title>
+
+	<script src="https://unpkg.com/thpace"></script>
+
+	<link rel="stylesheet" href="{% static 'css/canva.css' %}">
+	<link rel="stylesheet" href="{% static 'css/dash_style.css' %}">
+</head>
+
+<body>
+	<canvas id="make-me-cool"></canvas>
+	<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6">
+					<div class="card mb-4 mx-4">
+						<div class="card-body p-4">
+							<h1 style="text-align: center;">Register</h1>
+							<p class="text-medium-emphasis" style="text-align: center;">Create your account</p>
+							<div class="input-group mb-3"><span class="input-group-text">
+									<svg class="icon">
+										<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+
+									</svg></span>
+								<input class="form-control" type="text" placeholder="Username">
+							</div>
+							<div class="input-group mb-3"><span class="input-group-text">
+									<svg class="icon">
+										<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
+									</svg></span>
+								<input class="form-control" type="text" placeholder="Email">
+							</div>
+							<div class="input-group mb-3"><span class="input-group-text">
+									<svg class="icon">
+										<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+									</svg></span>
+								<input class="form-control" type="password" placeholder="Password">
+							</div>
+							<div class="input-group mb-4"><span class="input-group-text">
+									<svg class="icon">
+										<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
+									</svg></span>
+								<input class="form-control" type="password" placeholder="Repeat password">
+							</div>
+							<button class="btn btn-block btn-success" type="button">Create Account</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'js/canva.js' %}"></script>
+</body>
+
+</html>
