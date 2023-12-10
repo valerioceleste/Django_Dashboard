@@ -6,7 +6,7 @@ app_name = 'dash'
 urlpatterns = [
 
     path('', views.index, name='index'),
-    path('signup/', views.signup, name='signup'),
+    path('signup/', views.registration_request, name='signup'),
     path('login/', views.user_login, name='login'),
 
 ]

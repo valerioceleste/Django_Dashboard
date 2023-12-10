@@ -29,6 +29,7 @@
 									{% csrf_token %}
 									<h1>Login</h1>
 									<p class="text-medium-emphasis">Sign In to your account</p>
+
 									<div class="input-group mb-3"><span class="input-group-text">
 											<svg class="icon">
 												<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
@@ -36,6 +37,7 @@
 										<input class="form-control" type="text" placeholder="Username" name="username"
 											required>
 									</div>
+
 									<div class="input-group mb-4"><span class="input-group-text">
 											<svg class="icon">
 												<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked">
@@ -44,6 +46,7 @@
 										<input class="form-control" type="password" placeholder="Password" name="psw"
 											required>
 									</div>
+
 									<div class="row">
 										<div class="col-6">
 											<button class="btn btn-primary px-4" type="submit">Login</button>
@@ -53,6 +56,7 @@
 												password?</button>
 										</div>
 									</div>
+
 								</form>
 
 							</div>
