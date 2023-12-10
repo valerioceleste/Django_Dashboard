@@ -1,4 +1,7 @@
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.contrib import messages
 from django.shortcuts import render
 
 def index(request):
