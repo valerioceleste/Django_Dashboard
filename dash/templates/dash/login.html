@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
 	<canvas id="make-me-cool"></canvas>
 	<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
 		<div class="container">
@@ -45,6 +46,11 @@
 											</svg></span>
 										<input class="form-control" type="password" placeholder="Password" name="psw"
 											required>
+										{% if messages %}
+										{% for message in messages %}
+										<p style="color: red;">{{ message }}</p>
+										{% endfor %}
+										{% endif %}
 									</div>
 
 									<div class="row">

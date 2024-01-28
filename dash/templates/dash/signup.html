@@ -8,7 +8,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Match Maker - Log In</title>
+	<title>Match Maker - Sign Up</title>
 
 	<script src="https://unpkg.com/thpace"></script>
 
@@ -18,6 +18,15 @@
 
 <body>
 	<canvas id="make-me-cool"></canvas>
+	{% if messages %}
+	<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		{% for message in messages %}
+		{{ message }}
+		{% endfor %}
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+	{% endif %}
+
 	<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -25,7 +34,7 @@
 					<div class="card-group d-block d-md-flex row">
 						<div class="card col-md-7 p-4 mb-0">
 							<div class="card-body">
-								<form action="{% url 'dash:login' %}" method="post"> <!--password match e warning-->
+								<form action="{% url 'dash:signup' %}" method="post"> <!--password match e warning-->
 									{% csrf_token %}
 									<h1>Sign up</h1>
 									<p class="text-medium-emphasis">Create your account</p>
@@ -46,7 +55,7 @@
 											required>
 									</div>
 
-									<div class="input-group mb-4"><span class="input-group-text">
+									<div class="input-group mb-3"><span class="input-group-text">
 											<svg class="icon">
 												<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked">
 												</use>
@@ -55,7 +64,7 @@
 											autocomplete="new-password" required>
 									</div>
 
-									<div class="input-group mb-4"><span class="input-group-text">
+									<div class="input-group mb-3"><span class="input-group-text">
 											<svg class="icon">
 												<use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked">
 												</use>
